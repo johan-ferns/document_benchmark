@@ -2,18 +2,35 @@ import pypdfium2 as pdfium
 from pathlib import Path
 from PIL import Image
 import io
-import json
+from surya.foundation import FoundationPredictor
+from surya.recognition import RecognitionPredictor
+from surya.detection import DetectionPredictor
+from surya.layout import LayoutPredictor
+from surya.settings import settings as surya_settings
 from data_structure import Extracted, ExtractedType, Coordinates, ExtractionResults
 
 
-def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults: 
+def pdf_page_to_image(pdf_path: str | Path, page_num: int) -> Image.Image:
+    """Convert a PDF page to a PIL Image."""
+    pdf = pdfium.PdfDocument(pdf_path)
+    page = pdf[page_num]
+    
+    # Render at higher resolution for better OCR
+    bitmap = page.render(scale=2.0)
+    pil_image = bitmap.to_pil()
+    
+    pdf.close()
+    return pil_image
+
+
+def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
     """
-    Extract content from a PDF file and populate Extracted pydantic objects. 
+    Extract content from a PDF file using Surya and populate Extracted pydantic objects.
     
     Args:
         pdf_path:  Path to the PDF file
         
-    Returns: 
+    Returns:
         ExtractionResults containing lists of extracted texts, tables, and figures
     """
     pdf_path = Path(pdf_path)
@@ -21,90 +38,97 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
     tables = []
     figures = []
     
-    pdf = pdfium.PdfDocument(pdf_path)
+    # Initialize Surya predictors
+    foundation_predictor = FoundationPredictor()
+    recognition_predictor = RecognitionPredictor(foundation_predictor)
+    detection_predictor = DetectionPredictor()
+    layout_predictor = LayoutPredictor(
+        FoundationPredictor(checkpoint=surya_settings.LAYOUT_MODEL_CHECKPOINT)
+    )
     
-    for page_num in range(len(pdf)):
-        page = pdf[page_num]
+    # Get number of pages
+    pdf = pdfium.PdfDocument(pdf_path)
+    num_pages = len(pdf)
+    pdf.close()
+    
+    # Process each page
+    for page_num in range(num_pages):
+        # Convert PDF page to image
+        page_image = pdf_page_to_image(pdf_path, page_num)
         
-        # Extract text
-        textpage = page.get_textpage()
-        text_content = textpage.get_text_range()
+        # Run layout analysis to detect different elements
+        layout_predictions = layout_predictor([page_image])
+        layout_result = layout_predictions[0]
         
-        if text_content and text_content. strip():
-            width = page. get_width()
-            height = page.get_height()
+        # Run OCR for text extraction
+        ocr_predictions = recognition_predictor(
+            [page_image], 
+            det_predictor=detection_predictor
+        )
+        ocr_result = ocr_predictions[0]
+        
+        # Extract text with bounding boxes
+        if hasattr(ocr_result, 'text_lines') and ocr_result.text_lines:
+            # Combine all text from the page
+            full_text = "\n".join([line.text for line in ocr_result.text_lines])
+            
+            # Get page dimensions
+            page_bbox = ocr_result.image_bbox
             
             text_extracted = Extracted(
-                extracted_type=ExtractedType.TEXT,
+                extracted_type=ExtractedType. TEXT,
                 page_no=page_num + 1,
                 path=pdf_path,
                 coordinates=Coordinates(
-                    x1=0,
-                    y1=0,
-                    x2=int(width),
-                    y2=int(height)
+                    x1=int(page_bbox[0]),
+                    y1=int(page_bbox[1]),
+                    x2=int(page_bbox[2]),
+                    y2=int(page_bbox[3])
                 ),
-                data=text_content,
+                data=full_text,
                 data_type="text"
             )
             texts.append(text_extracted)
         
-        # Extract images using pdfplumber for better image detection
-        import pdfplumber
-        with pdfplumber.open(pdf_path) as plumber_pdf:
-            plumber_page = plumber_pdf.pages[page_num]
-            
-            # Get images from the page
-            if hasattr(plumber_page, 'images') and plumber_page.images:
-                for img_idx, img in enumerate(plumber_page.images):
-                    img_bbox = (
-                        int(img.get('x0', 0)),
-                        int(img.get('top', 0)),
-                        int(img. get('x1', 0)),
-                        int(img.get('bottom', 0))
+        # Process layout predictions to extract tables and figures
+        if hasattr(layout_result, 'bboxes') and layout_result.bboxes:
+            for bbox_info in layout_result.bboxes:
+                label = bbox_info.label
+                bbox = bbox_info.bbox
+                
+                # Extract tables
+                if label == 'Table':
+                    table_extracted = Extracted(
+                        extracted_type=ExtractedType. TABLE,
+                        page_no=page_num + 1,
+                        path=pdf_path,
+                        coordinates=Coordinates(
+                            x1=int(bbox[0]),
+                            y1=int(bbox[1]),
+                            x2=int(bbox[2]),
+                            y2=int(bbox[3])
+                        ),
+                        data=None,  # Could extract text from this region if needed
+                        data_type="text"
                     )
-                    
+                    tables.append(table_extracted)
+                
+                # Extract figures (images, charts, pictures)
+                elif label in ['Picture', 'Figure', 'Formula']: 
                     figure_extracted = Extracted(
                         extracted_type=ExtractedType.FIGURE,
                         page_no=page_num + 1,
                         path=pdf_path,
                         coordinates=Coordinates(
-                            x1=img_bbox[0],
-                            y1=img_bbox[1],
-                            x2=img_bbox[2],
-                            y2=img_bbox[3]
+                            x1=int(bbox[0]),
+                            y1=int(bbox[1]),
+                            x2=int(bbox[2]),
+                            y2=int(bbox[3])
                         ),
                         data=None,
                         data_type="image/png"
                     )
                     figures.append(figure_extracted)
-            
-            # Also check for figures (non-text regions that might be charts/diagrams)
-            if hasattr(plumber_page, 'figures') and plumber_page.figures:
-                for fig_idx, fig in enumerate(plumber_page.figures):
-                    fig_bbox = (
-                        int(fig.get('x0', 0)),
-                        int(fig.get('top', 0)),
-                        int(fig.get('x1', 0)),
-                        int(fig.get('bottom', 0))
-                    )
-                    
-                    figure_extracted = Extracted(
-                        extracted_type=ExtractedType.FIGURE,
-                        page_no=page_num + 1,
-                        path=pdf_path,
-                        coordinates=Coordinates(
-                            x1=fig_bbox[0],
-                            y1=fig_bbox[1],
-                            x2=fig_bbox[2],
-                            y2=fig_bbox[3]
-                        ),
-                        data=None,
-                        data_type="image/png"
-                    )
-                    figures.append(figure_extracted)
-    
-    pdf.close()
     
     return ExtractionResults(
         texts=texts,
@@ -116,20 +140,17 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
 if __name__ == "__main__": 
     # Example usage
     pdf_file = "data/pdf/input/example_1.pdf"
-    output_json_path = "data/pdf/output/example_1.json"
     results = extract_pdf_content(pdf_file)
     
     print(f"Extracted {len(results.texts)} text blocks")
     print(f"Extracted {len(results.tables)} tables")
     print(f"Extracted {len(results.figures)} figures")
-
-    # Convert to dictionary using Pydantic's model_dump method
-    results_dict = results.model_dump(mode='json')
     
-    # Save to JSON file
-    output_path = Path(output_json_path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+    # Print figure locations for debugging
+    print("\nFigure details:")
+    for fig in results.figures:
+        print(f"  Page {fig.page_no}: {fig.coordinates}")
     
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(results_dict, f, indent=2, ensure_ascii=False)
-    
+    print("\nTable details:")
+    for table in results.tables:
+        print(f"  Page {table.page_no}: {table. coordinates}")
