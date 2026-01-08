@@ -6,6 +6,10 @@ from PIL import Image
 from data_structure import Extracted, ExtractedType, Coordinates, ExtractionResults
 from tqdm import tqdm
 from dotenv import load_dotenv
+import json
+from copy import deepcopy
+
+
 
 os.environ["DISABLE_MODEL_SOURCE_CHECK"] = "True"
 load_dotenv()
@@ -13,27 +17,28 @@ load_dotenv()
 weight_path = os.getenv("WEIGHT_PATH")
 
 
-def pdf_page_to_image(pdf_path:  str | Path, page_num: int) -> Image.Image:
+def pdf_page_to_image(pdf_path:   str | Path, page_num:   int) -> Image.Image:
     """Convert a PDF page to a PIL Image."""
     pdf = pdfium.PdfDocument(pdf_path)
     page = pdf[page_num]
     
     # Render at good resolution for OCR
-    bitmap = page.render(scale=1.0)
+    bitmap = page.render(scale=2.0)
     pil_image = bitmap.to_pil()
     
     pdf.close()
     return pil_image
 
 
-def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults: 
+def extract_pdf_content(pdf_path:  str | Path, debug:  bool = False) -> ExtractionResults:   
     """
     Extract content from a PDF file using PaddleOCR and populate Extracted pydantic objects.
     
     Args:
-        pdf_path:   Path to the PDF file
+        pdf_path:    Path to the PDF file
+        debug:  If True, print detailed debugging information
         
-    Returns:
+    Returns:  
         ExtractionResults containing lists of extracted texts, tables, and figures
     """
     pdf_path = Path(pdf_path)
@@ -42,7 +47,6 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
     figures = []
     
     # Initialize PaddleOCR PP-StructureV3
-    # This includes layout analysis, table recognition, and OCR
     pipeline = PPStructureV3(
         # Layout Detection - detects text, table, figure regions
         layout_detection_model_dir=weight_path + "official_models/PP-DocLayout_plus-L",
@@ -56,33 +60,24 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
         # Text Recognition (OCR) - recognizes text content
         text_recognition_model_dir=weight_path + "official_models/PP-OCRv5_server_rec",
         
-        # Table Recognition (enabled as you requested)
+        # Table Recognition
         table_classification_model_dir=weight_path + "official_models/PP-LCNet_x1_0_table_cls",
         wired_table_structure_recognition_model_dir=weight_path + "official_models/SLANeXt_wired",
         wireless_table_structure_recognition_model_dir=weight_path + "official_models/SLANet_plus",
         wired_table_cells_detection_model_dir=weight_path + "official_models/RT-DETR-L_wired_table_cell_det",
         wireless_table_cells_detection_model_dir=weight_path + "official_models/RT-DETR-L_wireless_table_cell_det",
         
-        # Optional models (you have them, so including them)
-        # doc_orientation_classify_model_dir=weight_path + "official_models/PP-LCNet_x1_0_doc_ori",
-        # doc_unwarping_model_dir=weight_path + "official_models/UVDoc",
-        # textline_orientation_model_dir=weight_path + "official_models/PP-LCNet_x1_0_textline_ori",
-        # formula_recognition_model_dir=weight_path + "official_models/PP-FormulaNet_plus-L",
-        # chart_recognition_model_dir=weight_path + "official_models/PP-Chart2Table",
-        
         # Enable table recognition
         use_table_recognition=True,
-        use_region_detection=True,  # Set True if you have PP-DocBlockLayout
+        use_region_detection=True,
 
-        # Disable features you don't need (optional - enable if you want)
-        use_doc_orientation_classify=False,  # Set True if you want document rotation correction
-        use_doc_unwarping=False,  # Set True if you want document unwarping
-        use_textline_orientation=False,  # Set True if you want text line orientation
-        use_seal_recognition=False,  # No seal models available
-        use_formula_recognition=False,  # Set True if you need formula recognition
-        use_chart_recognition=False,  # Set True if you need chart to table conversion
-
-
+        # Disable features you don't need
+        use_doc_orientation_classify=False,
+        use_doc_unwarping=False,
+        use_textline_orientation=False,
+        use_seal_recognition=False,
+        use_formula_recognition=False,
+        use_chart_recognition=False,
     )
 
     
@@ -91,28 +86,46 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
     num_pages = len(pdf)
     pdf.close()
     
+    print(f"Processing {num_pages} pages...")
+    
     # Process each page
     for page_num in tqdm(range(num_pages)):
         # Convert PDF page to image
         page_image = pdf_page_to_image(pdf_path, page_num)
         
-        # Save temporarily as PaddleOCR works with file paths or numpy arrays
+        # Convert to numpy array
         import numpy as np
         img_array = np.array(page_image)
         
+        if debug:
+            print(f"\n=== Page {page_num + 1} ===")
+            print(f"Image shape:   {img_array.shape}")
+        
         # Run PP-StructureV3 prediction
-        result = pipeline. predict(input=img_array)
+        result = pipeline.predict(input=img_array)
         
         # Process results
         for res in result:
-            # Get layout parsing results
-            if hasattr(res, 'layout_parsing_result'):
-                layout_result = res.layout_parsing_result
+            # Get the parsing_res_list which contains the layout regions
+            if 'parsing_res_list' in res:
+                parsing_results = res['parsing_res_list']
                 
-                # Iterate through detected regions
-                for region in layout_result: 
-                    region_type = region.get('type', '').lower()
-                    bbox = region.get('bbox', [0, 0, 0, 0])
+                if debug:  
+                    print(f"Found {len(parsing_results)} regions in parsing_res_list")
+                
+                for region in parsing_results:
+                    # Access LayoutBlock attributes using the correct attribute names
+                    region_label = getattr(region, 'label', 'unknown')
+                    bbox = getattr(region, 'bbox', None)
+                    content = getattr(region, 'content', '')
+                    
+                    if debug:
+                        print(f"  Region label: {region_label}, bbox: {bbox}")
+                    
+                    if bbox is None or len(bbox) < 4:
+                        if debug:
+                            print(f"  Skipping region - invalid bbox")
+                        continue
                     
                     # Extract coordinates
                     coords = Coordinates(
@@ -122,93 +135,64 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
                         y2=int(bbox[3])
                     )
                     
-                    # Handle different region types
-                    if region_type == 'text':
-                        # Extract text content
-                        text_content = region.get('text', '')
-                        
-                        if text_content and text_content.strip():
+                    # Categorize based on label
+                    # TEXT types
+                    if region_label in ['text', 'doc_title', 'paragraph_title', 'section_title', 
+                                       'list_item', 'equation', 'vision_footnote', 'footnote', 
+                                       'footer', 'header', 'number']: 
+                        if content and content.strip():
+                            if debug:
+                                print(f"    → TEXT: {content[: 50]}...")
+                            
                             text_extracted = Extracted(
                                 extracted_type=ExtractedType. TEXT,
                                 page_no=page_num + 1,
                                 path=pdf_path,
                                 coordinates=coords,
-                                data=text_content,
+                                data=content,
                                 data_type="text"
                             )
                             texts.append(text_extracted)
                     
-                    elif region_type == 'table': 
-                        # Extract table
-                        table_html = region.get('html', '')
+                    # TABLE types
+                    elif region_label in ['table', 'table_caption', 'table_footnote']: 
+                        # Try to get HTML if available
+                        table_html = getattr(region, 'html', '')
+                        
+                        if debug:
+                            print(f"    → TABLE (has HTML:  {bool(table_html)})")
                         
                         table_extracted = Extracted(
                             extracted_type=ExtractedType.TABLE,
                             page_no=page_num + 1,
                             path=pdf_path,
                             coordinates=coords,
-                            data=table_html if table_html else None,
+                            data=table_html if table_html else content,
                             data_type="text"
                         )
                         tables.append(table_extracted)
                     
-                    elif region_type in ['figure', 'image', 'chart']:
-                        # Extract figure/chart
+                    # FIGURE types
+                    #:TODO figure_title may need to be added.
+                    elif region_label in ['figure', 'chart', 'figure_caption', 'image']:
+                        if debug:
+                            print(f"    → FIGURE/CHART")
+                        
                         figure_extracted = Extracted(
-                            extracted_type=ExtractedType. FIGURE,
-                            page_no=page_num + 1,
-                            path=pdf_path,
-                            coordinates=coords,
-                            data=None,
-                            data_type="image/png"
-                        )
-                        figures.append(figure_extracted)
-            
-            # Alternative: if layout_parsing_result is not available, use regions directly
-            elif hasattr(res, 'regions'):
-                for region in res.regions:
-                    bbox = region.get('bbox', [0, 0, 0, 0])
-                    region_type = region.get('type', '').lower()
-                    
-                    coords = Coordinates(
-                        x1=int(bbox[0]),
-                        y1=int(bbox[1]),
-                        x2=int(bbox[2]),
-                        y2=int(bbox[3])
-                    )
-                    
-                    if region_type == 'text': 
-                        text_content = region. get('res', {}).get('text', '')
-                        if text_content: 
-                            texts.append(Extracted(
-                                extracted_type=ExtractedType.TEXT,
-                                page_no=page_num + 1,
-                                path=pdf_path,
-                                coordinates=coords,
-                                data=text_content,
-                                data_type="text"
-                            ))
-                    
-                    elif region_type == 'table': 
-                        table_html = region. get('res', {}).get('html', '')
-                        tables.append(Extracted(
-                            extracted_type=ExtractedType.TABLE,
-                            page_no=page_num + 1,
-                            path=pdf_path,
-                            coordinates=coords,
-                            data=table_html if table_html else None,
-                            data_type="text"
-                        ))
-                    
-                    elif region_type in ['figure', 'image']: 
-                        figures.append(Extracted(
                             extracted_type=ExtractedType.FIGURE,
                             page_no=page_num + 1,
                             path=pdf_path,
                             coordinates=coords,
-                            data=None,
+                            data=None,  # Could store the image data if needed
                             data_type="image/png"
-                        ))
+                        )
+                        figures.append(figure_extracted)
+                    
+                    else:
+                        if debug: 
+                            print(f"    → UNKNOWN LABEL: {region_label}")
+                            if content: 
+                                print(f"       Content: {content[:50]}...")
     
     return ExtractionResults(
         texts=texts,
@@ -217,25 +201,136 @@ def extract_pdf_content(pdf_path: str | Path) -> ExtractionResults:
     )
 
 
-if __name__ == "__main__": 
-    # Example usage
-    pdf_file = "data/pdf/input/example_1.pdf"
-    results = extract_pdf_content(pdf_file)
+
+def rescale_extraction_results(
+    results: ExtractionResults,
+    original_width: int,
+    original_height: int,
+    target_width: int = 612,
+    target_height: int = 792
+) -> ExtractionResults:
+    """
+    Rescale all bounding boxes in ExtractionResults to fit a target size.
     
+    Args:
+        results: Original ExtractionResults
+        original_width: Width of the original image/page
+        original_height: Height of the original image/page
+        target_width: Target width (default: 612 for PDF points)
+        target_height: Target height (default: 792 for PDF points)
+        
+    Returns:
+        New ExtractionResults with rescaled coordinates
+    """
+    # Calculate scaling factors
+    width_scale = target_width / original_width
+    height_scale = target_height / original_height
+    
+    print(f"Rescaling from ({original_width}x{original_height}) to ({target_width}x{target_height})")
+    print(f"Scale factors: width={width_scale:.4f}, height={height_scale:.4f}")
+    
+    # Create a deep copy to avoid modifying the original
+    rescaled_results = deepcopy(results)
+    
+    # Rescale all categories
+    for category in [rescaled_results.texts, rescaled_results.tables, rescaled_results.figures]:
+        for item in category:
+            if item. coordinates is not None:
+                # Rescale coordinates
+                item.coordinates = Coordinates(
+                    x1=int(item.coordinates.x1 * width_scale),
+                    y1=int(item.coordinates.y1 * height_scale),
+                    x2=int(item.coordinates.x2 * width_scale),
+                    y2=int(item.coordinates.y2 * height_scale)
+                )
+    
+    return rescaled_results
+
+
+if __name__ == "__main__":  
+    # Example usage
+    example_file_name = "example_2"
+    pdf_file = "data/pdf/input/"+ example_file_name +".pdf"
+    
+    if os.path.exists("data/pdf/output/"+ example_file_name +"/") == False:
+        os.mkdir("data/pdf/output/"+ example_file_name +"/")
+    output_path_org_result = "data/pdf/output/"+ example_file_name +"/"+ example_file_name +"_org.json"
+    output_path_comp_result = "data/pdf/output/"+ example_file_name +"/"+ example_file_name +"_gt.json"
+
+    # Get content
+    results = extract_pdf_content(pdf_file, debug=True)
+    
+    print(f"\n{'='*50}")
+    print(f"FINAL RESULTS:")
+    print(f"{'='*50}")
     print(f"Extracted {len(results.texts)} text blocks")
     print(f"Extracted {len(results.tables)} tables")
     print(f"Extracted {len(results.figures)} figures")
     
     # Print details
-    print("\nText blocks:")
-    for text in results.texts:
-        print(f"  Page {text.page_no}: {text.coordinates}")
+    if results.texts:
+        print("\n📝 Text blocks:")
+        for i, text in enumerate(results.texts[:5]):  # Show first 5
+            print(f"  [{i+1}] Page {text.page_no}: {text.coordinates}")
+            print(f"      Preview: {str(text.data)[:100]}...")
+    else:
+        print("\n📝 No text blocks found!")
     
-    print("\nTables:")
-    for table in results.tables:
-        print(f"  Page {table.page_no}: {table.coordinates}")
+    if results.tables:
+        print("\n📊 Tables:")
+        for i, table in enumerate(results.tables):
+            print(f"  [{i+1}] Page {table.page_no}: {table. coordinates}")
+    else:
+        print("\n📊 No tables found!")
     
-    print("\nFigures:")
-    for fig in results.figures:
-        print(f"  Page {fig. page_no}: {fig.coordinates}")
+    if results.figures:
+        print("\n📈 Figures:")
+        for i, fig in enumerate(results.figures):
+            print(f"  [{i+1}] Page {fig.page_no}: {fig. coordinates}")
+    else:
+        print("\n📈 No figures found!")
 
+    # Convert to dictionary using Pydantic's model_dump
+    results_dict = results.model_dump(mode='json')
+
+    # Save to original image size to JSON file
+    with open(output_path_org_result, 'w', encoding='utf-8') as f:
+        json.dump(results_dict, f, indent=2, ensure_ascii=False)
+    
+    print(f"Saved extraction results to {output_path_org_result}")
+    
+
+
+    # Get the actual PDF page dimensions
+    pdf = pdfium.PdfDocument(pdf_file)
+    page = pdf[0]  # Get first page for dimensions
+    pdf_width = page.get_width()
+    pdf_height = page.get_height()
+    pdf.close()
+
+    # # Render at good resolution for OCR
+    # bitmap = page.render(scale=2.0)
+    # pil_image = bitmap.to_pil()
+
+    # Calculate rendered image dimensions (at scale=2.0)
+    render_scale = 2.0
+    rendered_width = int(pdf_width * render_scale)
+    rendered_height = int(pdf_height * render_scale)
+
+    # Rescale back to PDF dimensions
+    rescaled_results = rescale_extraction_results(
+        results,
+        original_width=rendered_width,
+        original_height=rendered_height,
+        target_width=int(pdf_width),
+        target_height=int(pdf_height)
+    )
+
+    # Convert to dictionary using Pydantic's model_dump
+    rescaled_results_dict = rescaled_results.model_dump(mode='json')
+
+    # Save to rescaled image size to JSON file
+    with open(output_path_comp_result, 'w', encoding='utf-8') as f:
+        json.dump(rescaled_results_dict, f, indent=2, ensure_ascii=False)
+    
+    print(f"Saved rescaled extraction results to {output_path_comp_result}")

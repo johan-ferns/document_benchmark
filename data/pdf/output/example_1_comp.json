@@ -1,0 +1,1736 @@
+{
+  "texts": [
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 151,
+        "x2": 367,
+        "y2": 209
+      },
+      "data": "Changes in income across different  levels of educational attainment during  the first year of the COviD-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 34,
+        "y1": 119,
+        "x2": 187,
+        "y2": 138
+      },
+      "data": "Census in Brief ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 32,
+        "y1": 243,
+        "x2": 214,
+        "y2": 256
+      },
+      "data": "Census of Population, 2021",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 353,
+        "x2": 170,
+        "y2": 362
+      },
+      "data": "Release date: October 4, 2023",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 34,
+        "y1": 737,
+        "x2": 64,
+        "y2": 753
+      },
+      "data": "🌟",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 74,
+        "y1": 737,
+        "x2": 154,
+        "y2": 752
+      },
+      "data": "Statistics Statistique Canada Canada ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 488,
+        "y1": 730,
+        "x2": 576,
+        "y2": 752
+      },
+      "data": "Canada ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 44,
+        "x2": 218,
+        "y2": 54
+      },
+      "data": "How to obtain more information ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 60,
+        "x2": 533,
+        "y2": 79
+      },
+      "data": "For information about this product or the wide range of services and data available from Statistics Canada, visit our website,www.statcan.gc.ca.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 93,
+        "x2": 144,
+        "y2": 101
+      },
+      "data": "You can also contact us by ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 115,
+        "x2": 168,
+        "y2": 124
+      },
+      "data": "Email at infostats@statcan.gc.ca ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 137,
+        "x2": 375,
+        "y2": 146
+      },
+      "data": "Telephone,from Monday to Friday, 8:30 a.m. to 4:30 p.m., at the following numbers:",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 47,
+        "y1": 152,
+        "x2": 182,
+        "y2": 160
+      },
+      "data": "•Statistical Information Service ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 47,
+        "y1": 163,
+        "x2": 306,
+        "y2": 171
+      },
+      "data": "•National telecommunications device for the hearing impaired ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 47,
+        "y1": 174,
+        "x2": 93,
+        "y2": 182
+      },
+      "data": "• Fax line ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 203,
+        "x2": 228,
+        "y2": 213
+      },
+      "data": "Standards of service to the public ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 431,
+        "y1": 151,
+        "x2": 498,
+        "y2": 182
+      },
+      "data": "1-800-263-11361-800-363-76291-514-283-9350",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 219,
+        "x2": 543,
+        "y2": 260
+      },
+      "data": "Statistics Canada is committed to serving its clients in a prompt, reliable and courteous manner. To this end, Statistics Canada has developed standards of service that its employees observe. To obtain a copy of these service standards, please contact Statistics Canada toll-free at 1-800-263-1136. The service standards are also published on www.statcan.gc.ca under \"Contact us\"> \"Standards of service to the public \n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 34,
+        "y1": 280,
+        "x2": 153,
+        "y2": 291
+      },
+      "data": "Note of appreciation ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 33,
+        "y1": 296,
+        "x2": 521,
+        "y2": 327
+      },
+      "data": "Canada owes the success of its statistical system to a long-standing partnership between Statistics Canada, the citizens of Canada, its businesses, governments and other institutions. Accurate and timely statistical information could not be produced without their continued co-operation and goodwill.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 42,
+        "y1": 360,
+        "x2": 468,
+        "y2": 392
+      },
+      "data": "Published by authority of the Minister responsible for Statistics Canada © His Majesty the King in Right of Canada, as represented by the Minister of Industry, 2023All rights reserved. Use of this publication is governed by the Statistics Canada Open Licence Agreement.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 43,
+        "y1": 403,
+        "x2": 242,
+        "y2": 423
+      },
+      "data": "An HTML version is also available.\nCette publication est aussi disponible en français.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 2,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 43,
+        "y1": 444,
+        "x2": 223,
+        "y2": 474
+      },
+      "data": "Release date: October 4, 2023\nCatalogue number 98-200-X, issue 2021015\nISBN 978-0-660-67674-6\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment  during the first year of the COVID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 61,
+        "y1": 97,
+        "x2": 118,
+        "y2": 109
+      },
+      "data": "Highlights ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 78,
+        "y1": 121,
+        "x2": 542,
+        "y2": 155
+      },
+      "data": "On average, people with a bachelor's degree or higher experienced increases in employment income from 2019 to 2020, the first year of the COVID-19 pandemic, while those with education below the bachelor level experienced decreases during this period.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 77,
+        "y1": 161,
+        "x2": 531,
+        "y2": 196
+      },
+      "data": "On average, increases in government earning replacement benefits—the Canada Emergency Response Benefit (CERB) and related benefits, and Employment Insurance (El)—more than offset decreases in employment income for all groups, except men with an apprenticeship certificate.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 78,
+        "y1": 202,
+        "x2": 532,
+        "y2": 224
+      },
+      "data": "By contrast with other provinces, on average, people in Alberta and in Newfoundland and Labrador with a bachelor's degree or higher experienced decreases in employment income.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 254,
+        "x2": 128,
+        "y2": 264
+      },
+      "data": "Introduction ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 277,
+        "x2": 549,
+        "y2": 347
+      },
+      "data": "Job losses associated with the pandemic particularly affected people in certain industries that typically have lower earnings, such as accommodation and food services and administrative and support services. This raised concerns about whether the pandemic worsened existing income disparities in Canada. Analyses of income data showed that, while lower-income populations experienced larger employment income losses, these were offset by COVID-19 economic and recovery benefits and El. This resulted in an overall reduction in income inequality in 2020 compared with 2019.2\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 358,
+        "x2": 552,
+        "y2": 452
+      },
+      "data": "Arelated question is whether the pandemic widened disparities between people with different levels of education.In general, higher levels of education are associated with higher earnings.3Additionally, education level was associated with job security during the pandemic. The Labour Force Survey showed that declines in the employment rate from February to April 2020, during the first months of the pandemic, were larger among those aged 25 to 64 with education below the bachelor level (11.7 percentage points), compared with those in the same age group who held a bachelor's degree or higher (6.9 percentage points). The employment rates of those with education below the bachelor level did not recover to pre-pandemic levels until fall 2021, compared with late 2020for those who held a bachelor's degree or higher.4\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 462,
+        "x2": 552,
+        "y2": 569
+      },
+      "data": "These disparities are connected to differences in the types of jobs held by people with different levels of education.People with higher incomes and those with a bachelor's degree or higher are more likely to work in industries with high telework capacity, such as professional, scientific and technical services, that recovered rapidly from the pandemic.5 They are also more likely to work in \"triple-protected\" jobs—those that are permanent rather than term or casual positions; cannot easily be automated; and are pandemic resilient because they are suitable for remote work, compatible with physical distancing or deemed essential by authorities.6 By contrast, people with education below the bachelor level are more likely to work in sectors such as construction, retail trade, transportation and warehousing, and accommodation and food services. These sectors are more dependent on in-person work and therefore more affected by shutdowns and other policies such as physical distancing rules.7",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 579,
+        "x2": 537,
+        "y2": 602
+      },
+      "data": "The goal of this article is to build on the previous census findings about the effects of the pandemic on income equality by examining changes in income by detailed level of education and gender. It examines three types of ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 640,
+        "x2": 498,
+        "y2": 725
+      },
+      "data": "1. Statistics Canada (2020b). Also see 2016 Census table 98-400-X2016364.\n\n2. Statistics Canada (222).\n\n3. Statistics Canada (2017).\n\n4. Labour Force Survey, table 14-10-0019-01.\n\n5. Statistics Canada (2021a) and Statistics Canada (2021b).\n\n6. Frenette and Morisette (2021).\n\n7. Statistics Canada (2020a) and Statistics Canada (2020b).Also see 2021 Census tables 98-10-0455-01 and 98-10-0588-01.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 751,
+        "x2": 316,
+        "y2": 760
+      },
+      "data": "Statistics Canada –Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 3,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 551,
+        "y1": 752,
+        "x2": 556,
+        "y2": 759
+      },
+      "data": "3",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment during the first year of the COVID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 88,
+        "x2": 555,
+        "y2": 170
+      },
+      "data": "income: employment income; earning replacement benefits (namely, CovID-19 economic and recovery benefits and El); and the combination of those two income types, referred to as labour market related income. It will provide a clearer understanding of the changes in employment income for people with different levels of education and the degree to which government benefits compensated for employment income losses. The 2021 Census data also provide other information, such as people's major field of study and province of residence, as well as whether they live in an urban centre. This can shed further light on the relationship between education and income during the first year of the pandemic.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 181,
+        "x2": 550,
+        "y2": 287
+      },
+      "data": "The target population for this article is people who were aged 25 to 64 at the time of the census in May 2021 and who had non-zero employment income in either 2019 or 2020. People who had employment income in 2019 but none in 2020 (or, more rarely, vice versa) are therefore included, as declines in income experienced by those who went from having some employment income before the pandemic to having none in 2020 are an important part of the income picture. Income figures for 2019 are adjusted for inflation and presented in 2020 constant dollars.Education data and all other non-income variables are based on a person's circumstances in May 2021; thus,for a small proportion of the population who completed their credentials between 2019 and May 2021, their level of education in May 2021 will not describe their level of education in 2019. This is not expected to influence the overall patterns observed in the data.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 304,
+        "x2": 529,
+        "y2": 331
+      },
+      "data": "From 2019 to 2020, employment income increased for those with a bachelor's degree or higher, but decreased for those below that level of education ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 343,
+        "x2": 548,
+        "y2": 389
+      },
+      "data": "The effects of the pandemic on Canadians' employment incomes had significant variations across different levels of education. On average, people with educational attainment below a bachelor's degree experienced decreases in their average employment income, whereas those with a bachelor's degree or higher saw increases. The pattern was consistent across women and men (Chart 1).9",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 399,
+        "x2": 553,
+        "y2": 470
+      },
+      "data": "In general, people with the lowest levels of education had larger decreases in employment income, and those with the highest levels of education had the largest increases. For example, people with no certificate, diploma or degree or with high school as their highest level of education experienced larger declines in employment income than those with a college credential or with a university certificate or diploma below the bachelor level.At the other end of the scale, the largest increases in employment income were among people with an earned doctorate, at $6,500 (+8.1%) for women and $6,900 (+6.6%) for men.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 480,
+        "x2": 555,
+        "y2": 563
+      },
+      "data": "However, the change in average employment income is an aggregate figure. At every level of education, some people experienced decreases in employment income, while others experienced increases. People with lower levels of education were more likely to experience decreases, accounting for much of the difference in the average employment income change between educational groups. Employment income decreased for over half of people whose highest level of education was no certificate, diploma or degree (56.1%) or a high school diploma or equivalency certificate (52.8%); nearly half (49.0%)of those with a college certificate or diploma; over two in five (42.2%) of those with a bachelor's degree; and over one-third (35.1%) of those with an earned doctorate.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 573,
+        "x2": 551,
+        "y2": 631
+      },
+      "data": "This is a strong indicator of the connection between educational attainment and job security during the pandemic,which is at least partly because people with higher levels of education were more able to work remotely. In May 2021, over half (52.9%) of workers aged 25 to 64 with an earned doctorate were working from home,1 compared with 39.4% of those with a bachelor's degree; 22.7% of those with a college certificate or diploma; 15.5% of those with high school as their highest level of education; and 8.8% of those with no certificate,diploma or degree.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 673,
+        "x2": 552,
+        "y2": 725
+      },
+      "data": "8. The term \"non-zero\" refers to positive or negative employment income. People who are self-employed may have negative net self employment income.\n9. For context on the number of people and share of the population with each level of education, see 2021 Census table 98-10-0384-01.\n10. People with an earned doctorate frequently worked in occupations that were compatible with remote work. For example, about one-quarter of workers aged 25 to 64 with an earned doctorate worked as university professors and lecturers (2021 Census, table 98-10-0403-01).\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 53,
+        "y1": 752,
+        "x2": 58,
+        "y2": 759
+      },
+      "data": "4",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 4,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 292,
+        "y1": 751,
+        "x2": 556,
+        "y2": 760
+      },
+      "data": "Statistics Canada – Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment  during the first year of the COvID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 93,
+        "x2": 88,
+        "y2": 102
+      },
+      "data": "Chart 1",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 104,
+        "x2": 554,
+        "y2": 127
+      },
+      "data": "Change in average employment income from 2019 to 2020 for the population aged 25 to 64, by educational attainment and gender1\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 366,
+        "x2": 540,
+        "y2": 422
+      },
+      "data": "1. Given that the non-binary population is small, data aggregation to a two-category gender variable is sometimes necessary to protect the \nconfidentiality of responses. In these cases, individuals in the category \"non-binary persons\" are distributed into the other two gender \ncategories and are denoted by the \"+\" symbol.\n\n2. This category includes women, as well as some non-binary persons.\n\n3. This category includes men, as well as some non-binary persons.\n\nSource:Statistics Canada, Census of Population, 2021.\n\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 443,
+        "x2": 556,
+        "y2": 561
+      },
+      "data": "The largest decreases in average employment income, however, were among people with an apprenticeship certificate (Chart 1). Larger shares of men and women with an apprenticeship certificate experienced employment income decreases (57.2% of women and 56.0% of men) than was the case at any other level of education. This is likely because their jobs could rarely be done remotely; only 7.5% of people with an apprenticeship certificate were working from home in May 2021, a smaller proportion than for any other level of education. Further, among men with an apprenticeship certificate who experienced a decrease, the average decline was $17,800, larger than for any other group with education below the bachelor level. The magnitude of the decrease is likely attributable to the high pre-pandemic average earnings of men with an apprenticeship certificate ($69,700), which were higher than for any other group of men or women with education below the bachelor level.A person with high wages who is out of work for a month will lose more than someone with low wages who is off work for the same amount of time.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 572,
+        "x2": 554,
+        "y2": 678
+      },
+      "data": "Among those with a degree in medicine, dentistry, veterinary medicine or optometry, experiences varied widely.Close to half of men (48.3%) and women (46.8%) with this level of education experienced declines in employment income, a larger share than for any other group with a bachelor's degree or higher, as dentists' and optometrists offices closed during parts of the pandemic, and some surgeries were cancelled. Conversely, the other half experienced increases in employment income, possibly attributable to high demand for doctors during the pandemic and/or to working overtime. Among those who experienced decreases in employment income, the drops were particularly large (-$35,600 for men and -$26,800 for women). Among those who experienced increases, the rises were similarly large (+$36,000 for men and +$29,700 for women). In both cases, the changes were larger than for people at any other education level.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 751,
+        "x2": 316,
+        "y2": 760
+      },
+      "data": "Statistics Canada – Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 551,
+        "y1": 752,
+        "x2": 556,
+        "y2": 759
+      },
+      "data": "5",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment  during the first year of the COVID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 89,
+        "x2": 523,
+        "y2": 117
+      },
+      "data": "Increases in earning replacement benefits largely offset employment income declines for people with education below the bachelor level ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 128,
+        "x2": 551,
+        "y2": 186
+      },
+      "data": "At the onset of the pandemic, in response to shutdowns and job losses, the government provided income support through a number of response and recovery benefits, such as the CERB and the Canada Emergency Student Benefit (CESB). The combination of federal COVID-19 emergency and recovery benefits1 in 2020 and El in 2019and 2020 is herein referred to as earning replacement benefits. The combination of income from these benefits and from employment income is referred to as net labour market related income.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 197,
+        "x2": 555,
+        "y2": 328
+      },
+      "data": "Average increases in earning replacement benefits from 2019 to 2020 were larger among people with lower levels of education (charts 2 and 3). This was because those with lower levels of education, as mentioned previously,were more likely to experience decreases in employment income, and the benefits were directed at offsetting these decreases. The differences by education level in the average increases in earning replacement benefits from 2019 to 2020 were primarily attributable to the share of people at each level of education who received increased earning replacement benefits. The proportion of people who received more earning replacement benefits in 2020than in 2019 ranged from roughly half (50.4%) of those with no certificate, diploma or degree to 28.6% of those with a bachelor's degree and 17.5% of those with an earned doctorate. This trend existed for both women and men. Women with an apprenticeship certificate—many of whom had certificates in fields adversely affected by the pandemic, such as hairdressing or culinary services—were the most likely to experience an increase in earning replacement benefits (56.1%), whereas 41.8% of men with an apprenticeship certificate did.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 345,
+        "x2": 89,
+        "y2": 354
+      },
+      "data": "Chart 2",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 357,
+        "x2": 547,
+        "y2": 379
+      },
+      "data": "Change in employment income, earning replacement benefits and net labour market related income from 2019 to 2020, by educational attainment, for men aged 25 to 64",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 619,
+        "x2": 262,
+        "y2": 627
+      },
+      "data": "Source: Statistics Canada, Census of Population, 2021.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 691,
+        "x2": 553,
+        "y2": 709
+      },
+      "data": "11.The COVID-19 benefits covered by this section are the CERB, CESB,Canada Recovery Benefit, Canada Recovery Caregiving Benefit and Canada Recovery Sickness Benefit.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 53,
+        "y1": 752,
+        "x2": 58,
+        "y2": 759
+      },
+      "data": "6",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 292,
+        "y1": 751,
+        "x2": 556,
+        "y2": 760
+      },
+      "data": "Statistics Canada – Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment  during the first year of the COVlD-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 53,
+        "y1": 92,
+        "x2": 90,
+        "y2": 101
+      },
+      "data": "Chart 3",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 104,
+        "x2": 547,
+        "y2": 127
+      },
+      "data": "Change in employment income, earning replacement benefits and net labour market related income from 2019 to 2020, by educational attainment, for women aged 25 to 64",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 53,
+        "y1": 366,
+        "x2": 263,
+        "y2": 374
+      },
+      "data": "Source: Statistics Canada, Census of Population, 2021.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 394,
+        "x2": 540,
+        "y2": 500
+      },
+      "data": "Consistent with the findings of the 2021 Census release on income, on average, earning replacement benefits offset decreases in employment income from 2019 to 2020. Among people with education below the bachelor level, average increases in earning replacement benefits were larger than average decreases in employment income, resulting in an average increase in net labour market related income. The only exception to this finding was men with an apprenticeship certificate, for two reasons. First, as noted above, a large share of them experienced declines in employment income (56.0%); they typically worked in jobs that could not be done remotely. Second, the size of the benefit increases among those who received increased earning replacement benefits (+$7,884) was smaller than the size of employment income losses among those whose employment income decreased (-$17,800).\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 511,
+        "x2": 552,
+        "y2": 592
+      },
+      "data": "People with a bachelor's degree or higher experienced average increases in both income types, and thus had, on average, larger increases in net labour market related income than those with lower levels of education. However,in most cases, the people who received increases in earning replacement benefits were not the same as those who had increases in employment income. Fewer than 10% of those with a bachelor's degree saw an increase in both income types (compared with, for example, 13.6% of those with no certificate, diploma or degree), while 22.5% of them had a decrease in employment income but did not have an increase in earning replacement benefits.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 610,
+        "x2": 503,
+        "y2": 652
+      },
+      "data": "Having a degree in mathematics, computer and information sciences was associated with large increases in employment income, while men with a credential in trades fields had the largest decreases ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 664,
+        "x2": 541,
+        "y2": 722
+      },
+      "data": "Changes in employment income from 2019 to 2020 also varied notably by major field of study. The largest increases were among men (+$7,900, or +9.4%) and women (+$4,600, or +7.9%) with a bachelor's degree or higher in mathematics, computer and information sciences. Men with a postsecondary credential below the bachelor level in mathematics, computer and information sciences also had an increase in employment income (+$1,200, or +1.8%), unlike most other people at that level of education. Remote work may have been more ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 751,
+        "x2": 316,
+        "y2": 760
+      },
+      "data": "Statistics Canada – Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 551,
+        "y1": 752,
+        "x2": 556,
+        "y2": 759
+      },
+      "data": "7",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment during the first year of the COVID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 88,
+        "x2": 548,
+        "y2": 123
+      },
+      "data": "feasible, and thus job losses less common and briefer, for people who worked in these areas. In the professional,scientific and technical services sector, which includes computer systems design and related services, telework capacity was over 80%,2 and employment in January 2021 was higher than it had been before the pandemic.13",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 133,
+        "x2": 544,
+        "y2": 239
+      },
+      "data": "At the other end of the scale, men with a postsecondary credential below the bachelor level in architecture,engineering and related trades experienced the largest employment income decreases (in dollar terms) for any major fieldof study (-$3,200, or-4.7%).At the below-bachelor level,this field is often connectedto jobs in the trades. Among men with a postsecondary credential below the bachelor level in this field who worked in 2020 or 2021, nearly 6 in 10 (59.1%) worked in the occupational category of trades, transport and equipment operators and related occupations. This occupational category saw a 6.9% decrease in employment for men from 2019 to 2020, larger than the 5.0% decline among men employed across all sectors.14 Among men aged 25 to 64 with an apprenticeship certificate specifically, a large majority (87.2%) studied architecture, engineering and related trades1, so job losses in the trades also help to explain their declines in employment income.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 250,
+        "x2": 550,
+        "y2": 356
+      },
+      "data": "Percentage decreases in employment income for men with a postsecondary credential below the bachelor level were similarly large for those whose major field of study was personal, protective and transportation services (-4.7%, or -$2,900) or visual and performing arts and communications technologies (-4.7%, or -$2,360). However,they were smaller in dollar terms because people in these fields typically have lower earnings. These two fields also had the largest percentage and dollar decreases in employment income for women with a postsecondary credential below the bachelor level: down 8.6%, or $2,800, in personal, protective and transportation services,and down 6.5%, or $2,440, in visual and performing arts and communications technoloqies. This was because hairdressing, culinary services such as restaurants, and performing arts were especially affected by the pandemic—they involve a high degree of in-person contact.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 372,
+        "x2": 500,
+        "y2": 399
+      },
+      "data": "Employment income decreases were larger and more widespread across education levels in Alberta and Newfoundland and Labrador ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 411,
+        "x2": 544,
+        "y2": 481
+      },
+      "data": "While in most provinces the patterns of changes in employment income by level of education were similar to the national pattern, there were some exceptions, especially in Alberta and Newfoundland and Labrador. Previous 2021 Census analyses found that these were the only two provinces where median household income declined from 2015 to 2020, connected not only with the pandemic but with lower oil prices during that period. Both provinces are substantial oil producers, and oil prices fell to record lows during 2020 as much of global and national travel and transport was restricted because of the pandemic.16",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 492,
+        "x2": 556,
+        "y2": 623
+      },
+      "data": "From 2019 to 2020, the average employment income of people with a bachelor's degree or higher declined in Alberta (-$2,100, or -2.1%, for men and -$900, or -1.4%, for women) and in Newfoundland and Labrador (-$900,or -1.0%, for men and -$800, or -1.2%, for women), in contrast to the increases seen nationally and in all other provinces for people with this level of education. In Alberta, men at every level of education, including those with a master's degree or doctorate, experienced employment income decreases, and the declines were broad-based across most fields of study. This was likely connected with provincewide economic challenges connected to the pandemic's impacts on the oil sector. In Newfoundland and Labrador, however, employment income declines for degree-holders were primarily attributable to large decreases in employment income (over $10,000, and 15% to 17%, among both women and men) among those with a degree in education, as elementary and secondary school teachers in this province experienced large earnings decreases. These declines were not attributable to periods of being off work, as they were seen among education degree holders who worked for the full year in 2020.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 666,
+        "x2": 217,
+        "y2": 725
+      },
+      "data": "12. Statistics Canada (2021d).\n\n13.Statistics Canada (2021c).\n\n14.Labour Force Survey, table 14-10-0416-01.\n15.2021 Census,table 98-10-0403-01.\n16.Meier, Batubenga and Garda (2021).\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 53,
+        "y1": 752,
+        "x2": 58,
+        "y2": 759
+      },
+      "data": "8",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 8,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 292,
+        "y1": 751,
+        "x2": 556,
+        "y2": 760
+      },
+      "data": "Statistics Canada –Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment during the first year of the COVID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 88,
+        "x2": 547,
+        "y2": 170
+      },
+      "data": "In addition, employment income decreases of men with an apprenticeship certificate in these two provinces were larger than those seen for Canada overall. This likely plays a role in the large employment income decreases of men with an apprenticeship certificate at the national level: Alberta accounted for 11.7% of Canada's population aged 25 to 64, but for 19.9% of the men with an apprenticeship certificate in this age group. While men with an apprenticeship certificate experienced average employment income declines of $4,100 (-5.9%) at the national level, decreases were larger in Newfoundland and Labrador (-$10,000, or -13.8%) and in Alberta (-$7,300, or -8.5%).\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 181,
+        "x2": 555,
+        "y2": 263
+      },
+      "data": "Moreover, federal government transfers in the form of earning replacement benefits (such as the CERB) did not offset employment income losses in these two provinces as much as in the other provinces. At most levels of education below a bachelor's degree, men in Alberta and Newfoundland and Labrador still experienced losses after taking into account these benefits (i.e., experienced declines in net labour market related income). In Canada overall, this was only the case for men with an apprenticeship certificate.For Alberta in particular, this is in part because the main earning replacement benefit (the CERB) was set at a flat rate ($2,000 per month), and prepandemic earnings at every level of education were higher in Alberta than in Canada overall.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 280,
+        "x2": 515,
+        "y2": 306
+      },
+      "data": "Declines in income were more widespread among men living outside urban centres, but the same was not the case for women ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 319,
+        "x2": 556,
+        "y2": 425
+      },
+      "data": "Experiences also differed somewhat between men living in large urban centres (census metropolitan areas), in smaller urban centres (census agglomerations) and outside urban centres. The changes in income by education level for men in large urban centres and for women in all three geographical categories were similar to those of people in Canada overall. However, outside urban centres, men with a bachelor's degree or an earned doctorate had declines in average employment income. Moreover, in addition to the declines in labour market related income among men with an apprenticeship certificate, men outside urban centres with a college certificate or diploma,a university certificate or diploma below the bachelor level, or an earned doctorate also experienced declines in labour market related income. These findings may indicate that there were fewer options for remote work among people living outside urban centres.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 442,
+        "x2": 123,
+        "y2": 452
+      },
+      "data": "Conclusion ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 465,
+        "x2": 551,
+        "y2": 523
+      },
+      "data": "This article's analyses support and expand upon previous findings that people with lower levels of education were more likely to lose jobs and employment income during the COVID-19 pandemic. On average, people with levels of education below a bachelor's degree had lower employment income in 2020 than in 2019, while those with a bachelor's degree or higher saw increases in employment income. However, government benefits such as the CERB offset declines in employment income for all groups except men with an apprenticeship certificate.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 540,
+        "x2": 190,
+        "y2": 550
+      },
+      "data": "Additional information ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 564,
+        "x2": 554,
+        "y2": 610
+      },
+      "data": "Additional analysis on changes in income during the COVID-19 pandemic can be found in the Census in Brief article \"The contribution of pandemic relief benefits to the incomes of Canadians in 2020\" and the Daily article \"Pandemic benefits cushion losses for low income earners and narrow income inequality – after-tax income grows across Canada except in Alberta and Newfoundland and Labrador.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 620,
+        "x2": 540,
+        "y2": 642
+      },
+      "data": "Additional information on changes in income from 2019 to 2020 in relation to educational characteristics can be found in data tables.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 653,
+        "x2": 554,
+        "y2": 687
+      },
+      "data": "Reference products are designed to help users make the most of 2021 Census data. These include the Education Reference Guide; the Income Reference Guide; the Guide to the Census of Population, 2021; the Dictionary,Census of Population, 2021; and the 2021 Census of Population questionnaires.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 751,
+        "x2": 316,
+        "y2": 760
+      },
+      "data": "Statistics Canada– Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 9,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 551,
+        "y1": 752,
+        "x2": 556,
+        "y2": 759
+      },
+      "data": "9",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 62
+      },
+      "data": "Changes in income across different levels of educational attainment  during the first year of the COVID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 89,
+        "x2": 290,
+        "y2": 100
+      },
+      "data": "Data sources, methods and definitions ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 114,
+        "x2": 125,
+        "y2": 123
+      },
+      "data": "Data sources ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 136,
+        "x2": 552,
+        "y2": 157
+      },
+      "data": "The data in this analysis are from the 2021 Census of Population. Further information on the census can be found in the Guide to the Census of Population, 2021, Catalogue no. 98-304-X2021001.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 168,
+        "x2": 520,
+        "y2": 190
+      },
+      "data": "All information on the quality and comparability of census data on education can be found in the Education Reference Guide, Census of Population, 2021, Catalogue no. 98-500-X2021013.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 207,
+        "x2": 100,
+        "y2": 216
+      },
+      "data": "Methods ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 230,
+        "x2": 545,
+        "y2": 251
+      },
+      "data": "The target population of this study is people aged 25 to 64 in private households who had non-zero employment income in either 2019 or 2020.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 262,
+        "x2": 460,
+        "y2": 272
+      },
+      "data": "Income figures for 2019 are adjusted for inflation and are presented in 2020 constant dollars.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 283,
+        "x2": 549,
+        "y2": 353
+      },
+      "data": "Given that the non-binary population is small, data aggregation to a two-category gender variable is sometimes necessary to protect the confidentiality of responses. In these cases, individuals in the category \"non-binary persons\" are distributed into the other two gender categories. Unless otherwise indicated in the text, the category \"men\" includes men, as well as some non-binary persons, while the category \"women\" includes women, as well as some non-binary persons. For more information on the gender concept, see Filling the gaps: Information on gender in the 2021 Census \n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 364,
+        "x2": 552,
+        "y2": 422
+      },
+      "data": "Random rounding and percentage distributions: To ensure the confidentiality of responses collected for the 2021 Census, a random rounding process is used to alter the values reported in individual cells. As a result, when these data are summed or grouped, the total value may not match the sum of the individual values, since the total and subtotals are independently rounded. Similarly, percentage distributions, which are calculated on rounded data, may not add up to 100%.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 438,
+        "x2": 111,
+        "y2": 447
+      },
+      "data": "Definitions ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 461,
+        "x2": 532,
+        "y2": 495
+      },
+      "data": "Employment income: This consists of all income received as wages, salaries and commissions from paid employment and net self-employment income from farm or non-farm unincorporated business or professional practice during the reference period.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 505,
+        "x2": 552,
+        "y2": 551
+      },
+      "data": "Earning replacement benefits: This refers to Employment Insurance in 2019, and in 2020 to Employment Insurance as well as the following federal COVID-19 benefits: the Canada Emergency Response Benefit, Canada Emergency Student Benefit, Canada Recovery Benefit, Canada Recovery Caregiving Benefit and Canada Recovery Sickness Benefit.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 562,
+        "x2": 520,
+        "y2": 572
+      },
+      "data": "Net labour market related income: This refers to employment income plus earning replacement benefits.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 50,
+        "y1": 583,
+        "x2": 533,
+        "y2": 617
+      },
+      "data": "Bachelor's degree or higher: This includes bachelor's, master's and doctoral degrees; degrees in medicine,dentistry, veterinary medicine and optometry; and university certificates and diplomas that have a bachelor's degree as a prerequisite.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 54,
+        "y1": 752,
+        "x2": 64,
+        "y2": 759
+      },
+      "data": "10",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 10,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 292,
+        "y1": 751,
+        "x2": 556,
+        "y2": 760
+      },
+      "data": "Statistics Canada –Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 63,
+        "y1": 31,
+        "x2": 518,
+        "y2": 63
+      },
+      "data": "Changes in income across different levels of educational attainment  during the first year of the COvID-19 pandemic ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 89,
+        "x2": 123,
+        "y2": 100
+      },
+      "data": "References ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 112,
+        "x2": 503,
+        "y2": 135
+      },
+      "data": "Frenette, Marc and René Morisette. 2021. \"Job security in the age of artificial intelligence and potential pandemics.\" Economic and Social Reports 1:6. June. Statistics Canada Catalogue no. 36-28-0001.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 145,
+        "x2": 552,
+        "y2": 167
+      },
+      "data": "Meier, Rebecca, Tshibangu Batubenga and Daanish Garda. 2021. \"Industrial Product Price Index: Annual Review,2020.\" Prices Analytical Series. February. Statistics Canada Catalogue no. 62F0014M.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 178,
+        "x2": 548,
+        "y2": 200
+      },
+      "data": "Statistics Canada. 2017.\"Does education pay? A comparison of earnings by level of education in Canada and its provinces and territories.\" Census in Brief. November. Statistics Canada Catalogue no. 98-200-X2016023.",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 211,
+        "x2": 393,
+        "y2": 233
+      },
+      "data": "Statistics Canada. 2020a. \"Labour Force Survey, April 2020..\" The Daily. April.https://www150.statcan.gc.ca/n1/daily-quotidien/200508/dq200508a-eng.htm ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 243,
+        "x2": 445,
+        "y2": 266
+      },
+      "data": "Statistics Canada. 2020b. \"Labour Force Survey, December 2020.\" The Daily. December.https://www150.statcan.gc.ca/n1/daily-quotidien/210108/dq210108a-eng.htm ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 275,
+        "x2": 537,
+        "y2": 298
+      },
+      "data": "Statistics Canada. 2021a. COVID-19 in Canada: A One-year Update on Social and Economic Impacts. March.Statistics Canada Catalogue no. 11-631-X.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 313,
+        "x2": 543,
+        "y2": 336
+      },
+      "data": "Statistics Canada. 2021b. COVID-19 in Canada: Year-end Update on Social and Economic Impacts. December.Statistics Canada Catalogue no. 11-631-X.\n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 346,
+        "x2": 423,
+        "y2": 369
+      },
+      "data": "Statistics Canada.2021c.\"Labour Force Survey, January2021.\" The Daily. January.https://www150.statcan.gc.ca/n1/daily-quotidien/210205/dq210205a-eng.htm ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 379,
+        "x2": 555,
+        "y2": 402
+      },
+      "data": "Statistics Canada. 2021d. \"Working from home during the COVID-19 pandemic, April 2020 to June 2021.\" The Daily August. https://www150.statcan.gc.ca/n1/daily-quotidien/210804/dq210804b-eng.htm ",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 51,
+        "y1": 412,
+        "x2": 554,
+        "y2": 446
+      },
+      "data": "Statistics Canada. 2022. \"Pandemic benefits cushion losses for low income earners and narrow income inequality \n– after-tax income grows across Canada except in Alberta and Newfoundland and Labrador.\" The Daily. July.\nhttps://www150.statcan.gc.ca/n1/daily-quotidien/220713/dq220713d-eng.htm \n",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 52,
+        "y1": 751,
+        "x2": 317,
+        "y2": 760
+      },
+      "data": "Statistics Canada – Catalogue no. 98-200-X, issue 2021015",
+      "data_type": "text"
+    },
+    {
+      "extracted_type": "text",
+      "page_no": 11,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 547,
+        "y1": 752,
+        "x2": 556,
+        "y2": 759
+      },
+      "data": "11",
+      "data_type": "text"
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "extracted_type": "figure",
+      "page_no": 1,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 419,
+        "y1": 160,
+        "x2": 576,
+        "y2": 337
+      },
+      "data": null,
+      "data_type": "image/png"
+    },
+    {
+      "extracted_type": "figure",
+      "page_no": 5,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 53,
+        "y1": 135,
+        "x2": 554,
+        "y2": 358
+      },
+      "data": null,
+      "data_type": "image/png"
+    },
+    {
+      "extracted_type": "figure",
+      "page_no": 6,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 54,
+        "y1": 389,
+        "x2": 553,
+        "y2": 610
+      },
+      "data": null,
+      "data_type": "image/png"
+    },
+    {
+      "extracted_type": "figure",
+      "page_no": 7,
+      "path": "data\\pdf\\input\\example_1.pdf",
+      "coordinates": {
+        "x1": 54,
+        "y1": 136,
+        "x2": 552,
+        "y2": 357
+      },
+      "data": null,
+      "data_type": "image/png"
+    }
+  ]
+}
