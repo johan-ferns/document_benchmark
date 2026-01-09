@@ -137,9 +137,12 @@ def extract_pdf_content(pdf_path:  str | Path, debug:  bool = False) -> Extracti
                     
                     # Categorize based on label
                     # TEXT types
-                    if region_label in ['text', 'doc_title', 'paragraph_title', 'section_title', 
-                                       'list_item', 'equation', 'vision_footnote', 'footnote', 
-                                       'footer', 'header', 'number']: 
+                    # # Dropping classes : 
+                    # ['doc_title',  'section_title', 'header', 'footnote', 'footer', 'number',
+                    #  'vision_footnote']
+                    if region_label in ['paragraph_title',
+                                       'text', 'list_item', 'equation',
+                                       ]: 
                         if content and content.strip():
                             if debug:
                                 print(f"    → TEXT: {content[: 50]}...")
@@ -173,8 +176,10 @@ def extract_pdf_content(pdf_path:  str | Path, debug:  bool = False) -> Extracti
                         tables.append(table_extracted)
                     
                     # FIGURE types
-                    #:TODO figure_title may need to be added.
-                    elif region_label in ['figure', 'chart', 'figure_caption', 'image']:
+                    #:TODO  may need to be added.
+                    # # Dropping classes : 
+                    # ['figure_title',  'image']
+                    elif region_label in ['figure', 'chart', 'figure_caption']:
                         if debug:
                             print(f"    → FIGURE/CHART")
                         
